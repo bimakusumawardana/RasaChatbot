@@ -1,0 +1,100 @@
+##version: "2.0"
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+
+
+- story: happy path tanya gejala dari penyakit
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_gejala
+    entities:
+    - penyakit: "flu"
+  - action: action_gejala
+  - slot_was_set:
+    - gejala: "Bersin-bersin, Hidung tersumbat dan berair, Sakit tenggorokan, sakit kepala ringan, Batuk, Demam (jarang)."
+  - action: utter_did_that_help
+
+- story: happy path tanya penyakit dari gejala
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_penyakit
+    entities:
+    - gejala: "mual, pusing"
+  - action: action_penyakit
+  - slot_was_set:
+    - penyakit: 'flu' 
+  - action: utter_did_that_help
+
+- story: happy path tanya obat dari penyakit
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_obat
+    entities:
+    - penyakit: 'flu'
+  - action: action_obat_from_penyakit #custom action
+  - slot_was_set:
+    - pengobatan: 'antasida'
+  - action: utter_did_that_help
+
+- story: happy path tanya advice dari penyakit
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_advice
+    entities:
+    - penyakit: 'flu'
+  - action: action_advice_from_penyakit #custom action
+  - slot_was_set:
+    - advice: 'jangan begadang'
+  - action: utter_did_that_help
+
+
+- story: happy path depresi curhat
+  steps:
+  - intent: depresi
+  - action: action_heal_depresi #custom action
+  - action: utter_did_that_help
+
+- story: happy path anxiety curhat
+  steps:
+  - intent: anxiety
+  - action: action_heal_anxiety #custom action
+  - action: utter_did_that_help
+
+- story: happy path parenting curhat
+  steps:
+  - intent: parenting
+  - action: action_heal_parenting #custom action
+  - action: utter_did_that_help
+
+- story: happy path realtionship curhat
+  steps:
+  - intent: relationship
+  - action: action_heal_relationship #custom action
+  - action: utter_did_that_help

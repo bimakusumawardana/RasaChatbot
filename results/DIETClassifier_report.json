@@ -1,0 +1,41 @@
+{
+  "gejala": {
+    "precision": 0.9772727272727273,
+    "recall": 1.0,
+    "f1-score": 0.9885057471264368,
+    "support": 43,
+    "confused_with": {}
+  },
+  "lama_gejala": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "penyakit": {
+    "precision": 0.9411764705882353,
+    "recall": 1.0,
+    "f1-score": 0.9696969696969697,
+    "support": 16,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9714285714285714,
+    "recall": 1.0,
+    "f1-score": 0.9855072463768115,
+    "support": 68
+  },
+  "macro avg": {
+    "precision": 0.9728163992869875,
+    "recall": 1.0,
+    "f1-score": 0.9860675722744688,
+    "support": 68
+  },
+  "weighted avg": {
+    "precision": 0.9717875117961623,
+    "recall": 1.0,
+    "f1-score": 0.9856014506115927,
+    "support": 68
+  }
+}

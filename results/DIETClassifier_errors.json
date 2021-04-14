@@ -1,0 +1,76 @@
+[
+  {
+    "text": "saat ini yang dirasakan adalah sulit bernapas, batuk-batuk, dada yang terasa sesak",
+    "entities": [
+      {
+        "start": 31,
+        "end": 82,
+        "value": "sulit bernapas, batuk-batuk, dada yang terasa sesak",
+        "entity": "gejala"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gejala",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.5457015037536621,
+        "value": "yang",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gejala",
+        "start": 31,
+        "end": 45,
+        "confidence_entity": 0.9877648949623108,
+        "value": "sulit bernapas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gejala",
+        "start": 47,
+        "end": 58,
+        "confidence_entity": 0.9446097612380981,
+        "value": "batuk-batuk",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gejala",
+        "start": 60,
+        "end": 82,
+        "confidence_entity": 0.7884187698364258,
+        "value": "dada yang terasa sesak",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "sudah beberapa hari saya flu, obat apa yang cocok untuk meredakan flu?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 28,
+        "value": "flu",
+        "entity": "penyakit"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "penyakit",
+        "start": 25,
+        "end": 28,
+        "confidence_entity": 0.9488531947135925,
+        "value": "flu",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "penyakit",
+        "start": 66,
+        "end": 69,
+        "confidence_entity": 0.6247071027755737,
+        "value": "flu",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

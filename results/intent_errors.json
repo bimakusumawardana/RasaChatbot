@@ -1,0 +1,10 @@
+[
+  {
+    "text": "mantab",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.6089982390403748
+    }
+  }
+]
