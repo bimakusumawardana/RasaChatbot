@@ -1,0 +1,99 @@
+##version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_gejala
+  - inform
+  - feedback
+  - ask_penyakit
+  - ask_advice
+  - ask_obat
+  - parenting
+  - depresi
+  - anxiety
+  - relationship
+
+responses:
+  utter_greet:
+  - text: "Hey! ada yang bisa saya bantu?"
+
+  utter_cheer_up:
+  - text: "Aku punya sesuatu untuk meningkatkan mood mu:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Apakah itu membantu?"
+
+  utter_happy:
+  - text: "Waw, jaga agar tetap bahagia"
+
+  utter_goodbye:
+  - text: "Terima kasih sudah menggunakan chatbot, jika kurang membantu silahkan tanyakan kembali"
+
+  utter_lama_gejala:
+  - text: berapa hari anda merasakan gejala tersebut ?
+
+  utter_iamabot:
+  - text: "Saya adalah seorang bot yang dikembangkan didalam aplikasi HOPE."
+ 
+  utter_ask_service:
+  - text: ada yang bisa saya bantu lagi?
+
+  utter_ask_feedback:
+  - text: kami mengharapkan anda untuk menyampaikan feedback tentang pengalaman anda menggunakan aplikasi HOPE?
+  
+actions:
+  - action_gejala
+  - action_feedback
+  - action_penyakit
+  - action_obat_from_penyakit
+  - action_advice_from_penyakit
+  - action_heal_depresi
+  - action_heal_anxiety
+  - action_heal_parenting
+  - action_heal_relationship
+
+
+entities:
+  - penyakit
+  - gejala
+  - nama
+  - lama_gejala
+  - advice
+  - pengobatan
+
+slots:
+  penyakit:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+  gejala:
+    type: list
+
+  nama:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  
+  
+  advice:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+  pengobatan:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
